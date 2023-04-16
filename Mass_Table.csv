@@ -1,3 +1,29 @@
-﻿Element;mass;x_SCS
-Skrzydlo;1;1
-Kadlub;2;2
+﻿Element;mass_kg;x_SCS;y_SCS;z_SCS;m*x;;Justyna ;mass_kg;x_SCS;y_SCS;z_SCS;mi/MTOW
+Kadłub;75.00;3.7;0;;277.5;;;17.00;20;0;5;0.054
+Belka ogonowa lewa;12.00;9.1;0;;109.2;;;6.00;112;0;3;0.019
+Belka ogonowa prawa;12.00;9.1;0;;109.2;;;;;;;
+Skrzydło lewe;50.00;5.3;0;;265;;;15.00;35;-70;30;0.048
+Skrzydło prawe;50.00;5.3;0;;265;;;15.00;35;70;30;0.048
+Statecznik pionowy lewy;5.00;12.1;0;;60.5;;;2.50;170;-18.5;5;0.008
+Statecznik pionowyy prawy ;5.00;12.1;0;;60.5;;;2.50;170;18.5;5;0.008
+Statecznik poziowy ;12.00;12.1;0;;145.2;;;3.50;165;0;32;0.011
+Podwozie główne prawe;15.00;5.8;0;;87;;;6.00;43;15;-38;0.019
+Podwozie główne  lewe;15.00;5.8;0;;87;;;6.00;43;-15;-38;0.019
+Podwozie przednie;10.00;1.4;0;;14;;;4.00;-29;0;-39;0.013
+Zespół napędowy (silnik, śmigło, chłodnica, instalacja, system paliwowy, strowanie silnika);300.00;6.35;0;;1905;;;59.00;-40;0;-2;0.187
+Układ sterowania (popychacze, siłowniki) ;15.00;6.5;0;;97.5;;;2.00;60;0;-10;0.006
+Awionika - inne np. ciśnieniomierze + przewody;10.00;1.5;0;;15;;;5.00;-10;0;4;0.016
+Akumulator ;50.00;2;0;;100;;;10.00;85;0;-10;0.032
+Wyposażenie (fotel, obudowy);0.00;;0;;0;;;;;;;0.000
+Załoga (1);0.00;;0;;0;;;;;;;0.000
+Paliwo pod płatem;220.00;5.34;0;;1175.57;;;16.50;25;35;30;0.052
+;;;0;;0;;;16.50;25;-35;30;0.052
+FLIR;38.00;0.8;0;;30.4;;;;;;;
+SAT-COM;3.50;1.8;0;;6.3;;;;;;;
+SAR RK-12;2.10;0.5;0;;1.05;;;;;;;
+VN-310 DUALGNSS/INS;0.16;2;0;;0.32;;;;;;;
+;;;;;;;;;;;;
+MTOW zał;900;;;;;;;315.00;;;;
+MTOW realne;899.8;;;Ixx;4811;;;;;;;
+Sca wartość;0.87;;;S.C.;5.35;;;;;;;
+;;;;S.C._Sca;0.30;;;;;;;
