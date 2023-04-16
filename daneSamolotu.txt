@@ -1,0 +1,3 @@
+# Dane geometryczne i masowe samolotu
+S = 1
+MTOW = 1
