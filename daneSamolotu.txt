@@ -1,3 +1,5 @@
 # Dane geometryczne i masowe samolotu
-S = 1
-MTOW = 1
+S= 12.682
+MTOW= 899.8
+b= 14.530
+c= 0.87
