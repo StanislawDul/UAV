@@ -1,0 +1,7 @@
+How after one plot in python create another python
+
+"plt.plot(y, cTrapez, label='Plat trapezowy')
+
+plt.show()"
+
+How to create new plot after this code?

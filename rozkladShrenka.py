@@ -17,7 +17,7 @@ for iVar in range(0, len(variableName)):
         MTOW = variableValue[iVar]
     elif variableName[iVar] == "b":
         b = variableValue[iVar]
-    else:
+    elif variableName[iVar] == "c":
         c = variableValue[iVar]
     print(variableName[iVar], " = ", variableValue[iVar])
 
@@ -33,9 +33,7 @@ df = pd.read_csv('Mass_Table.csv', sep = ';')
 #xSC = df['x_SCS'].to_numpy()
 #print(xSC)
 
-Vc = 35 #m/s - ustal dokładną wartość przy robienu obwiedni obciążeń!!
-n = 5 #założenie jak wyżej!!!
-C_L = 0.09 #jak wyżej!! Policzyć na podstawie Vc, S i MTOW
+n = 4.37 #założenie
 
 bPrzez2 = b/2
 
@@ -53,14 +51,41 @@ cElips = 4*S/(math.pi*b)*(1 - (2*y/b)**2)**0.5
 cTrapez = np.ones(21)*c
 #Elementarna siłą nośna
 #Płat eliptyczny
-L_Elips = 4*L/(math.pi*b)*(1 - (2*y/b)**2)**0.5
+L_Elips = 4*L*n/(math.pi*b)*(1 - (2*y/b)**2)**0.5
 #Płat trapezowy
 L_Trapez = L/b
 
-plt.plot(L_Elips, y)
+L_mean = np.mean([L_Elips, L_Trapez], axis=0)
 
+fig = plt.figure(figsize=(8, 4))
+plt.plot(y, cElips, '-o', color='orange', markersize=3, label='Plat eiptyczny')
+plt.plot(y, cTrapez, '-o', color='blue', markersize=3, label='Plat trapezowy')
+plt.legend()
+plt.xlabel('y [m]')
+plt.ylabel('c [m]')
+plt.grid(True)
+plt.savefig('Celip_Ctrap.png')
 # Show the plot
 plt.show()
+plt.close()
+
+# Second plot
+fig = plt.figure(figsize=(8, 4))
+plt.plot(y, L_mean, '-o', color='green', markersize=3)
+plt.ylim(0, 2200)
+plt.xlabel('y [m]')
+plt.ylabel('L_jednostkowa [N/m]')
+plt.grid(True)
+plt.savefig('L_mean.png')
+plt.show()
+plt.close()
+
+# stack the vectors horizontally to create a table
+table = np.column_stack((y, cElips, cTrapez, L_mean))
+
+# export the table to a CSV file
+np.savetxt('rozkladShrenka.csv', table, delimiter=',', header='y [m],Eliptyczny, Trapezowy,Jednostkowa sila nosna [N/m]', comments='')
+
 
 
 
