@@ -128,3 +128,15 @@ plt.close()
 # Mamy profil symetryczny wiec Cm= 0
 # Zatem moment skrecajacy 0
 # Latwo
+Ms = np.zeros(21)
+
+# stack the vectors horizontally to create a table
+table = np.column_stack((nrPasek, LiPasek, WnaPasek))
+
+# export the table to a CSV file
+np.savetxt('silyNaSkrzydle.csv', table, delimiter=',', header='Kolejne segmenty, Siła nośna [N], Ciężar skrzydła [N]', comments='', fmt='%f')
+
+table2 = np.column_stack((y, T_L, T_W, Tsum, Mg, Ms))
+
+# export the table to a CSV file
+np.savetxt('silyWskrzydle.csv', table2, delimiter=',', header='y [m], T_L [N], T_W_skrzydła [N], Mg [N*m], Ms [N*m]', comments='', fmt='%f')

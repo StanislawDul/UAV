@@ -58,7 +58,7 @@ L_Trapez = L/b
 L_mean = np.mean([L_Elips, L_Trapez], axis=0)
 
 fig = plt.figure(figsize=(8, 4))
-plt.plot(y, cElips, '-o', color='orange', markersize=3, label='Plat eiptyczny')
+plt.plot(y, cElips, '-o', color='orange', markersize=3, label='Plat eliptyczny')
 plt.plot(y, cTrapez, '-o', color='blue', markersize=3, label='Plat trapezowy')
 plt.legend()
 plt.xlabel('y [m]')
