@@ -93,8 +93,8 @@ for iPasek in range(19, -1, -1):
     Tsum[iPasek] = Tsum[iPasek+1] + LiPasek[iPasek] - WnaPasek[iPasek]
 
 fig = plt.figure(figsize=(8, 4))
-plt.plot(y, T_L, '-o', color='green', markersize=3, label='Obciazenia aerodynamiczne')
-plt.plot(y, T_W, '-o', color='red', markersize=3, label='Struktura skrzydla')
+plt.plot(y, T_L, '-o', color='green', markersize=3, label='Obciążenia aerodynamiczne')
+plt.plot(y, T_W, '-o', color='red', markersize=3, label='Struktura skrzydła')
 plt.plot(y, Tsum, '-o', color='magenta', markersize=3, label='Sumaryczne')
 #plt.ylim(0, 10)
 plt.xlabel('y [m]')
